@@ -1,0 +1,80 @@
+/* Defaults */
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+@media (min-width: 240px) and (max-width: 1040px) {
+  .fidget_spinner {
+    zoom: 2;
+  }
+}
+
+/* Preloader */
+.spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .93);
+  transition: all 0.15s ease-in;
+  z-index: 10;
+}
+
+.fidget_spinner,.im-page--history.im-page--history_loading:before {
+  position: absolute;
+  top: calc(50% - 27px);
+  left: calc(50% - 27px);
+  z-index: 1000;
+  display: block;
+  background: url('../dist/svg/fidget_spinner.svg');
+  width: 54px;
+  height: 54px;
+  -webkit-animation: fidget_spinner 2s infinite forwards;
+  -o-animation: fidget_spinner 2s infinite forwards;
+  animation: fidget_spinner 2s infinite forwards
+}
+
+.hidden {
+  display: none;
+}
+
+@-webkit-keyframes fidget_spinner {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  to {
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg)
+  }
+}
+
+@-o-keyframes fidget_spinner {
+  0% {
+    -o-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  to {
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg)
+  }
+}
+
+@keyframes fidget_spinner {
+  0% {
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0)
+  }
+
+  to {
+    -webkit-transform: rotate(1080deg);
+    -o-transform: rotate(1080deg);
+    transform: rotate(1080deg)
+  }
+}
